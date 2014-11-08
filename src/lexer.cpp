@@ -10,36 +10,6 @@
 #include <locale>
 #include <cctype>
 
-bool is_alpha_capital(char c)
-{
-    return c > 64 && c < 91;
-}
-
-bool is_alpha_lower(char c)
-{
-    return c > 96 && c < 123;
-}
-
-bool is_alpha(char c)
-{
-    return is_alpha_capital(c) || is_alpha_lower(c);
-}
-
-bool is_numerical(char c)
-{
-    return c > 47 && c < 58;
-}
-
-bool is_whitespace(char c)
-{
-    return c == 32 || c == 13 || c == 10 || c == 9;
-}
-
-bool is_comment(char c)
-{
-    return c == 35;
-}
-
 std::string& ltrim(std::string& s)
 {
     s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
