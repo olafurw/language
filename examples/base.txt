@@ -1,0 +1,42 @@
+
+// test comment
+name adder;
+
+//test
+// multiline comment
+@export
+def add(int x,int y)int
+{
+	int y=private_add(x,y);
+
+	return y;
+}
+
+@export
+def add(float x, float y) float
+{
+	float y =private_add(x, y);
+
+	return y;
+}
+
+def private_add(int x, int y) int
+{
+	return x+y;
+}
+
+def private_add(float x, float y) float
+{
+	return x + y;
+}
+
+def test() bool
+{
+	assert(add(1,2),3);
+}
+
+def main() void
+{
+	int x = add(4, 2);
+	print('Hello World\n');return 0;
+}
